@@ -4,9 +4,10 @@
   "package": "me.logwet.walker.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "client.DebugScreenOverlayMixin",
+    "client.KeyboardInputMixin"
   ],
   "client": [
-    "client.DebugScreenOverlayMixin"
   ],
   "server": [
   ],

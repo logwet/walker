@@ -19,7 +19,7 @@ public abstract class KeyboardInputMixin {
                             target = "Lnet/minecraft/client/player/KeyboardInput;up:Z",
                             opcode = Opcodes.PUTFIELD))
     private void overrideForwardInput(KeyboardInput keyboardInput, boolean value) {
-        keyboardInput.up = true;
+        keyboardInput.up = false;
     }
 
     @Redirect(
@@ -30,6 +30,6 @@ public abstract class KeyboardInputMixin {
                             target = "Lnet/minecraft/client/player/KeyboardInput;down:Z",
                             opcode = Opcodes.PUTFIELD))
     private void overrideBackwardsInput(KeyboardInput keyboardInput, boolean value) {
-        keyboardInput.down = false;
+        keyboardInput.down = true;
     }
 }
